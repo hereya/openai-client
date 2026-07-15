@@ -1,2 +1,10 @@
-infra: aws
+name: hereya/openai-client
+version: 0.1.0
+description: "Store an OpenAI API key as a SecureString in AWS SSM Parameter Store and expose it to your project as OPENAI_API_KEY"
+visibility: public # can be public or private
 iac: terraform
+infra: aws # can be aws, azure, gcp, local
+parameters:
+  openai_api_key:
+    description: "API key for interacting with OpenAI programmatically"
+    mandatory: true
